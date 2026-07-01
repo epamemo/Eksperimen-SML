@@ -10,6 +10,9 @@ on:
       - ".github/workflows/preprocess.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write   # commit-back butuh izin tulis (GITHUB_TOKEN default read-only)
+
 jobs:
   preprocess:
     runs-on: ubuntu-latest
